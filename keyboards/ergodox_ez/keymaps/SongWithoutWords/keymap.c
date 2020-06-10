@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|   {  |           |   }  |------+------+------+------+------+--------|
  * | LCtrl  |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|  '"  |   [  |   ]  | Alt  |                                       | Left | Down |  Up  |Right | ~L1  |
+ *   |  L1  |  `~  |  '"  | LGui | Alt  |                                       | Left | Down |  Up  |Right | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | App  | LGui |       | Alt  | <None> |
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    KC_LPRN,              KC_RPRN,   KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,              KC_BSLASH,
   KC_LSFT,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,     LT(MDIA, KC_SCLN), GUI_T(KC_QUOT),
   KC_LCTRL,        CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    KC_LCBR,              KC_RCBR,   KC_N,    KC_M,    KC_COMM, KC_DOT,   CTL_T(KC_SLSH),    KC_RSFT,
-  LT(SYMB,KC_GRV), KC_QUOT,     KC_LBRC,       KC_RBRC, KC_LALT,                                           KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, TT(SYMB),
+  TT(SYMB),        KC_GRV,      KC_QUOT,       KC_LGUI, KC_LALT,                                           KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, TT(SYMB),
 
                                                         ALT_T(KC_APP),    KC_LGUI,              KC_LALT,   CTL_T(KC_ESC),
                                                                           KC_HOME,              KC_PGUP,
