@@ -16,6 +16,40 @@ enum custom_keycodes {
   RGB_SLD
 };
 
+
+// Ideas for future
+// -------------------------------------------------------------------------------------------------------------------
+// - Go further by implementing as much of vim in your keyboard as you can
+// - Also, keep in mind Hyper and Meh for potential future use
+// - Add a layer for gaming (with numbers on top row and space bar on left thumb button)
+// - Change function keys to work like numpad (as in qwerty_code_friendly )
+// - The following search may help in finding typing tests to try alternative layout: programming speed typing test
+//
+// Idea for an alternate symbol layer with braces along the home row
+//
+/* Keymap 1: Symbol row
+ *
+ * ,---------------------------------------------------.           ,--------------------------------------------------.
+ * |Version  |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
+ * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
+ * |         |   !  |   @  |   #  |   $  |   %  |      |           |      |   ^  |   &  |   *  |   -  |   =  |   F12  |
+ * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |         |   [  |   {  |   (  |   )  |   `  |------|           |------| Down |   4  |   5  |   6  |   +  |        |
+ * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |         |   ]  |   }  |   )  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   \  |        |
+ * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   | EPRM  |      |      |      |      |                                       |      |   0  |   .  |   =  |      |
+ *   `-----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |Animat|      |       |Toggle|Solid |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |Bright|Bright|      |       |      |Hue-  |Hue+  |
+ *                                 |ness- |ness+ |------|       |------|      |      |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 `--------------------'       `--------------------'
+ */
+
+
 // Symbolic top row inspired by: https://github.com/qmk/qmk_firmware/blob/master/layouts/community/ergodox/qwerty_code_friendly/readme.md
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
