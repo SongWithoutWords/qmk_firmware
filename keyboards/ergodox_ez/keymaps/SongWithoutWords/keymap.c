@@ -16,16 +16,17 @@ enum custom_keycodes {
   RGB_SLD
 };
 
+// Symbolic top row inspired by: https://github.com/qmk/qmk_firmware/blob/master/layouts/community/ergodox/qwerty_code_friendly/readme.md
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | Esc    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
- * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   \    |
+ * | Esc    |   !  |   @  |   #  |   $  |   %  |   [  |           |   ]  |   ^  |   &  |   *  |   -  |   =  | BSpace |
+ * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  |   (  |           |   )  |   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | LShift |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|' / Cmd |
- * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|   {  |           |   }  |------+------+------+------+------+--------|
  * | LCtrl  |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |Grv/L1|  '"  |   [  |   ]  | Alt  |                                       | Left | Down |  Up  |Right | ~L1  |
@@ -40,14 +41,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = LAYOUT_ergodox_pretty(
   // left hand
-  KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,   KC_LEFT,              KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,     KC_0,              KC_MINS,
-  KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,   TG(SYMB),             TG(SYMB),     KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,              KC_BSLS,
-  KC_LSFT,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                       KC_H,    KC_J,    KC_K,    KC_L,     LT(MDIA, KC_SCLN), GUI_T(KC_QUOT),
-  KC_LCTRL,        CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,   ALL_T(KC_NO),         MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,   CTL_T(KC_SLSH),    KC_RSFT,
-  LT(SYMB,KC_GRV), KC_QUOT,     KC_LBRC,       KC_RBRC, KC_LALT,                                             KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, TT(SYMB),
-                                                        ALT_T(KC_APP),   KC_LGUI,              KC_LALT,      CTL_T(KC_ESC),
-                                                                         KC_HOME,              KC_PGUP,
-                                                        KC_BSPC, KC_DEL, KC_END,               KC_PGDN,      KC_ENT,  KC_SPC
+  KC_ESC,          KC_EXLM,     KC_AT,         KC_HASH, KC_DLR,  KC_PERC, KC_LBRC,              KC_RBRC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS,  KC_EQL,            KC_BSPC,
+  KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    KC_LPRN,              KC_RPRN,   KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,              KC_BSLASH,
+  KC_LSFT,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,     LT(MDIA, KC_SCLN), GUI_T(KC_QUOT),
+  KC_LCTRL,        CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    KC_LCBR,              KC_RCBR,   KC_N,    KC_M,    KC_COMM, KC_DOT,   CTL_T(KC_SLSH),    KC_RSFT,
+  LT(SYMB,KC_GRV), KC_QUOT,     KC_LBRC,       KC_RBRC, KC_LALT,                                           KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, TT(SYMB),
+
+                                                        ALT_T(KC_APP),    KC_LGUI,              KC_LALT,   CTL_T(KC_ESC),
+                                                                          KC_HOME,              KC_PGUP,
+                                                        KC_BSPC, KC_DEL,  KC_END,               KC_PGDN,   KC_ENT,  KC_SPC
 ),
 /* Keymap 1: Symbol Layer
  *
