@@ -19,11 +19,13 @@ enum custom_keycodes {
 
 // Ideas for future
 // -------------------------------------------------------------------------------------------------------------------
+// - May want to reconsider the decision to map the top row as symbols rather than numbers - consider passwords :thinking:
 // - Go further by implementing as much of vim in your keyboard as you can
 // - Also, keep in mind Hyper and Meh for potential future use
 // - Add a layer for gaming (with numbers on top row and space bar on left thumb button)
 // - Change function keys to work like numpad (as in qwerty_code_friendly )
 // - The following search may help in finding typing tests to try alternative layout: programming speed typing test
+// - Consider putting the layer switches on the far thumbs, as I have freed up a second location (top right) for backspace
 //
 // Idea for an alternate symbol layer with braces along the home row
 //
