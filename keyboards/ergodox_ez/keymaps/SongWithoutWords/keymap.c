@@ -31,6 +31,8 @@ enum custom_keycodes {
 // - Consider swapping putting space on left thumb, enter on right, backspace and delete on top right
 //   - This would allow the use of the further thumb keys for layer switching which could be awesome
 //
+// - TODO: figure out a good way to get all the function keys in without stomping the delete binding
+//
 // Idea for an alternate symbol layer with braces along the home row
 //
 /* Keymap 1: Symbol row
