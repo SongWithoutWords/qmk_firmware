@@ -26,6 +26,10 @@ enum custom_keycodes {
 // - Change function keys to work like numpad (as in qwerty_code_friendly )
 // - The following search may help in finding typing tests to try alternative layout: programming speed typing test
 // - Consider putting the layer switches on the far thumbs, as I have freed up a second location (top right) for backspace
+// - Consider if there are good places to bind home, end, pg up and pg down
+//
+// - Consider swapping putting space on left thumb, enter on right, backspace and delete on top right
+//   - This would allow the use of the further thumb keys for layer switching which could be awesome
 //
 // Idea for an alternate symbol layer with braces along the home row
 //
