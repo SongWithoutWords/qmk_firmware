@@ -37,7 +37,7 @@ enum custom_keycodes {
 //   - Could keep my hands closer to the home row and reduce vertical travel
 //   - Could do something similar on the other side with braces and symbols
 //
-// Idea for an alternate symbol layer with braces along the home row
+// Idea for an alternate symbol layer with braces along the home row (I should checkout the character layer on my cell, see how that's arranged)
 //
 /* Keymap 1: Symbol row
  *
