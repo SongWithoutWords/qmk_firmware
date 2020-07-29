@@ -98,3 +98,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, RGB_TOG, _______, RGB_RMOD,RGB_MOD, KC_P0,   _______, KC_PDOT, KC_PENT, KC_PENT, _______, _______, _______, _______  \
 ),
 };
+
+static bool g_keyDownEscape = false;
+static bool g_keyDownBSpace = false;
+static bool g_keyDownLCtrl  = false;
+static bool g_keyDownRCtrl  = false;
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+  const bool pressed = record->event.pressed;
+
+  switch (keycode) {
+  case KC_ESC:
+    g_keyDownEscape = pressed;
+    break;
+  case KC_BSPC:
+    g_keyDownBSpace = pressed;
+    break;
+  case KC_LCTRL:
+    g_keyDownLCtrl = pressed;
+    break;
+  case KC_RCTRL:
+    g_keyDownRCtrl = pressed;
+    break;
+  }
+
+  if (pressed) {
+    switch (keycode) {
+    case KC_ESC:
+    case KC_BSPC:
+    case KC_LCTRL:
+    case KC_RCTRL:
+      if (g_keyDownEscape && g_keyDownBSpace && g_keyDownLCtrl && g_keyDownRCtrl) {
+        reset_keyboard();
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
