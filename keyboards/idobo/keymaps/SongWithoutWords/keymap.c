@@ -98,6 +98,8 @@ static bool g_keyDownEscape = false;
 static bool g_keyDownBSpace = false;
 static bool g_keyDownLCtrl  = false;
 static bool g_keyDownRCtrl  = false;
+static bool g_keyDownQ  = false;
+static bool g_keyDownC  = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
@@ -116,6 +118,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   case KC_RCTRL:
     g_keyDownRCtrl = pressed;
     break;
+  case KC_Q:
+    g_keyDownQ = pressed;
+    break;
+  case KC_C:
+    g_keyDownC = pressed;
+    break;
   }
 
   if (pressed) {
@@ -124,8 +132,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case KC_BSPC:
     case KC_LCTRL:
     case KC_RCTRL:
+    case KC_Q:
+    case KC_C:
       if (g_keyDownEscape && g_keyDownBSpace && g_keyDownLCtrl && g_keyDownRCtrl) {
         reset_keyboard();
+        return false;
+      }
+      if (g_keyDownEscape && g_keyDownBSpace && g_keyDownLCtrl && g_keyDownQ) {
+        set_single_persistent_default_layer(QWERTY);
+        return false;
+      }
+      if (g_keyDownEscape && g_keyDownBSpace && g_keyDownLCtrl && g_keyDownC) {
+        set_single_persistent_default_layer(COLEMAK);
         return false;
       }
     }
